@@ -13,19 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('direccion_chofer', function (Blueprint $table) {
+        Schema::create('peso', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('Chofer_Id');
-            $table->unsignedBigInteger('Direccion_Id');
+            $table->string('Categoria', 45);
+            $table->string('Peso_Max', 45);
             $table->unsignedBigInteger('Usuario_Id');
             $table->integer('Estado')->default(1);
             $table->timestamps();
             $table->softDeletes();
-
-            $table->foreign('Chofer_Id')->references('id')->on('chofer');
-            $table->foreign('Direccion_Id')->references('id')->on('direccion');
-            $table->foreign('Usuario_Id')->references('id')->on('usuario');
             
+            $table->foreign('Usuario_Id')->references('id')->on('usuario');
         });
     }
 
@@ -36,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('direccion_chofer');
+        Schema::dropIfExists('peso');
     }
 };
