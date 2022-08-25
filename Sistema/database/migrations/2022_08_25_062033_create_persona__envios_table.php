@@ -13,19 +13,19 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('direccion_chofer', function (Blueprint $table) {
+        Schema::create('persona_envio', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('Chofer_Id');
-            $table->unsignedBigInteger('Direccion_Id');
+            $table->string('Nombre', 80);
+            $table->string('Apellido', 80);
+            $table->string('Documento_Identificacion', 45);
+            $table->string('Telefono');
+            $table->string('Email', 80);
             $table->unsignedBigInteger('Usuario_Id');
             $table->integer('Estado')->default(1);
             $table->timestamps();
             $table->softDeletes();
 
-            $table->foreign('Chofer_Id')->references('id')->on('chofer');
-            $table->foreign('Direccion_Id')->references('id')->on('direccion');
             $table->foreign('Usuario_Id')->references('id')->on('usuario');
-            
         });
     }
 
@@ -36,6 +36,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('direccion_chofer');
+        Schema::dropIfExists('persona_envio');
     }
 };

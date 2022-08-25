@@ -1,5 +1,18 @@
 *REGISTRO DE CAMBIOS SISTEMA*
 
+	*25-08-2022*
+		-Se Finalizan las Migraciones.
+		-Se Realiza el respectivo push de la nueva rama *SistemaBackend2Migraciones*.
+		-Se deja inicializado los controladores y los modelos para iniciar con la siguiente rata.
+		-Se realiza el Merge al main.
+
+	*24-08-2022*
+
+		-Iniciando con las Migraciones.
+		-Se Realizo Las Migraciones de modulos Usuarios y Chofer.
+		-Se Testearon cada una de Ellas Demostrando Que Si Corren.
+		-Se Sube El Primer Cambio Del Backend Modulo Usuarios y Chofer.
+
     *23-08-2022*
 
         -Iniciando El Repositorio.
@@ -12,10 +25,3 @@
         -Se Realiza El Merge al Main.
         -Se Realiza una sub rama de AgregandoSistemaBE llamada *SistemaBackend1Migraciones*.
 
-
-	*24-08-2022*
-
-		-Iniciando con las Migraciones.
-		-Se Realizo Las Migraciones de modulos Usuarios y Chofer.
-		-Se Testearon cada una de Ellas Demostrando Que Si Corren.
-		-Se Sube El Primer Cambio Del Backend Modulo Usuarios y Chofer.
