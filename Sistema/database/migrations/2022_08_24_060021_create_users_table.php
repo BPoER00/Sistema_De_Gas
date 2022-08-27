@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('usuario', function (Blueprint $table) {
             $table->id();
             $table->string('User');
-            $table->string('Email')->unique();
-            $table->timestamp('Password');
+            $table->string('email')->unique();
+            $table->timestamp('password');
             $table->unsignedBigInteger('Roles_Id');
             $table->integer('Estado')->default(1);
             $table->rememberToken();

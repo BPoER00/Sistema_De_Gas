@@ -1,6 +1,14 @@
 *REGISTRO DE CAMBIOS SISTEMA*
 
+	*26-08-2022*
+	
+		-Se realiza la asignacion de la tabla a cada uno de los modelos.
+		-Se realiza la asignacion de la llave primaria a cacda uno de los modelos.
+		-se realiza la asignacion de los campos a cada uno de los modelos.
+		-se realiza la asignacion de las llames foraneas a cada uno de los modelos. 
+
 	*25-08-2022*
+	
 		-Se Finalizan las Migraciones.
 		-Se Realiza el respectivo push de la nueva rama *SistemaBackend2Migraciones*.
 		-Se deja inicializado los controladores y los modelos para iniciar con la siguiente rata.

@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
@@ -11,16 +12,25 @@ use Laravel\Sanctum\HasApiTokens;
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
+    use SoftDeletes;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
+    //Constantes de valores activo e inactivo
+    const ESTADO_ELIMINADO = 0;
+    const ESTADO_ACTIVO = 1;
+
+
+    //nombre de tabla
+    protected $table = 'usuario';
+
+    //llave primaria
+    protected $primaryKey = 'id';
+
     protected $fillable = [
-        'name',
+        'User',
         'email',
         'password',
+        'Roles_Id',
+        'Estado',
     ];
 
     /**
@@ -41,4 +51,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    //hasOne
+    public function rol()
+    {
+        return $this->hasOne('App\Models\Roles', 'id', 'Roles_Id');
+    }
 }
