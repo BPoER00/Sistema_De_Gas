@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('direccion__chofers', function (Blueprint $table) {
+        Schema::create('direccion_chofer', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('Chofer_Id');
             $table->unsignedBigInteger('Direccion_Id');
@@ -23,7 +23,7 @@ return new class extends Migration
             $table->softDeletes();
 
             $table->foreign('Chofer_Id')->references('id')->on('chofer');
-        $table->foreign('Direccion_Id')->references('id')->on('direccion');
+            $table->foreign('Direccion_Id')->references('id')->on('direccion');
             $table->foreign('Usuario_Id')->references('id')->on('usuario');
             
         });
@@ -36,6 +36,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('direccion__chofers');
+        Schema::dropIfExists('direccion_chofer');
     }
 };
