@@ -1,5 +1,8 @@
 *REGISTRO DE CAMBIOS SISTEMA*
 
+	*30-09-2022*
+		- Agregamos el menu principal a las plantillas.
+
 	*02-09-2022*
 		- Se realizan cambios en la documentacion.
 		- Se agregan nuevos cambios de uso.
