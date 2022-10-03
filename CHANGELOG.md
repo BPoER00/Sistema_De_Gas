@@ -1,5 +1,8 @@
 *REGISTRO DE CAMBIOS SISTEMA*
 
+	*03-10-2022*
+		- Agregamos Mas Plantillas a Lunacy.
+
 	*30-09-2022*
 		- Agregamos el menu principal a las plantillas.
 
