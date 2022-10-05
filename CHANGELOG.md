@@ -1,5 +1,15 @@
 *REGISTRO DE CAMBIOS SISTEMA*
 
+	*05-10-2022*
+		- Agregando vistas en lunacy de.
+			- Registro De Camiones.
+			- Registro chofer.
+			- Registro Asignacion.
+			- Registro Pedidos.
+			- Registro Envios.
+			- Registro Gas.
+			- Registro Usuarios.
+
 	*03-10-2022*
 		- Agregamos Mas Plantillas a Lunacy.
 
