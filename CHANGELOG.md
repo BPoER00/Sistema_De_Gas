@@ -1,5 +1,12 @@
 *REGISTRO DE CAMBIOS SISTEMA*
 
+	*06-10-2022*
+		- Agregando Vistas al lunacy con estas parece ser suficiente para mostrar un ejemplo de la app.
+			- se agregaron vistas de registros que estas mismas se utilizaran si se da el motivo para.
+				- Mostrar Informacion Detallada.
+				- Editar Informacion.
+				- Ingresar Informacion.
+
 	*05-10-2022*
 		- Agregando vistas en lunacy de.
 			- Registro De Camiones.
