@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('Nombre', 55);
             $table->string('Apellido', 55);
             $table->date('Fecha_Nacimiento');
-            $table->integer('Licencia');
+            $table->string('Licencia');
             $table->string('Tipo_Licencia', 100)->nullable();
             $table->date('Fecha_Vencimiento')->nullable();
             $table->string('Telefono', 30);

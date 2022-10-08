@@ -1,5 +1,11 @@
 *REGISTRO DE CAMBIOS SISTEMA*
 
+	*08-10-2022*
+		- Agregando varios Request con validaciones de las reglas de ingreso.
+		- Agregando sanctum para validacion de api token.
+		- agregando una nueva migracion api token.
+		- Agregando UML de funciones.
+
 	*06-10-2022*
 		- Agregando Vistas al lunacy con estas parece ser suficiente para mostrar un ejemplo de la app.
 			- se agregaron vistas de registros que estas mismas se utilizaran si se da el motivo para.
