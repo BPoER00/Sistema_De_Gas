@@ -3,6 +3,7 @@
 namespace App\Http\Requests\CamionPersona;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Auth;
 
 class CamionPersonaNuevoRequest extends FormRequest
 {
@@ -13,7 +14,16 @@ class CamionPersonaNuevoRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
+    }
+
+    protected function prepareForValidation()
+    {
+        $usuario = Auth::user();
+
+        $this->merge([
+            'Usuario_Id' => $usuario ? $usuario->id : null,
+        ]);
     }
 
     /**
@@ -24,7 +34,27 @@ class CamionPersonaNuevoRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'Descripcion' => 'required|max:100',
+            'Camiones_Id' => 'required|numeric',
+            'Chofer_Id' => 'required|numeric'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            //required 
+            'Descripcion.required' => 'El campo [Descripcion] es requerido',
+            'Camiones_Id.required' => 'El campo [Camiones] es requerido',
+            'Chofer_Id.required' => 'El campo [Chofer] es requerido',
+        
+            //max
+            'Descripcion.max' => 'El campo [Descripcion] tiene un maximo de [100] caracteres',
+            
+            //numeric
+            'Camiones_Id.numeric' => 'Error al Ingresar el campo [Camiones]',
+            'Chofer_Id.numeric' => 'Error al Ingresar el campo [Chofer]'    
+        
         ];
     }
 }

@@ -1,5 +1,25 @@
 *REGISTRO DE CAMBIOS SISTEMA*
 
+	*13-10-2022*
+		- Instalamos sanctum y laravel/ui para el uso de la autenticacion del api.
+		- Agregando Actions Para La Facilitacion Del Uso Del Api Con El Front, Se Agregaron Los Siguientes.
+			- Autenticacion contiene: CrearTokenAction y LoginAction.
+			- Usuario contiene: ActualizarUsuarioAction, BuscarUsuarioAction.
+				- EliminarUsuarioAction, NuevoUsuarioAction, ObtenerUsuarioAction.
+		- Agregamos El controlador para la autenticacion de usuarios donde los usuarios se pueden logear y obtener el token para el uso de la appweb.
+		- Realizamos el Metodo store en el controlador de UsuarioControler para ingresar nuevos Usuarios.
+		- A la hora de agregar sanctum se agrega una migracion extra de los tokens generados.
+		- Terminamos de agregar los Request para nuestras validaciones de.
+			- AsignacionCamion.
+			- Camion.
+			- CamionPersona.
+			- Chofer.
+			- Login.
+		- Agregamos una carpeta de Utilidades para posibles utilidades.
+		- Se agrego un Seed de el usuario inicial que se tendra el el sistema.
+		- El api se agregaron las rutas de consultar usuario y Login.
+		- Iniciamos Agregando El proyecto del fron de VUEJS.
+
 	*08-10-2022*
 		- Agregando varios Request con validaciones de las reglas de ingreso.
 		- Agregando sanctum para validacion de api token.

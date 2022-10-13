@@ -58,4 +58,10 @@ class User extends Authenticatable
     {
         return $this->hasOne('App\Models\Roles', 'id', 'Roles_Id');
     }
+
+    //scope
+    public function scopeActivo($query)
+    {
+        return $query->where('estado', '=', self::ESTADO_ACTIVO);
+    }
 }
