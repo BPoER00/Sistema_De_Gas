@@ -4,7 +4,7 @@ namespace App\actions\Usuario;
 
 use App\Models\User;
 
-class ObtenerUsuario
+class ObtenerUsuarioAction
 {
     protected $model;
 
@@ -13,12 +13,16 @@ class ObtenerUsuario
         $this->model = $model;
     }
 
-    public function execute()
+    public function execute($id = null)
     {
         $query = $this->model::query()
             ->activo()
             ->orderBy('id', 'ASC');
 
+            if($id)
+            {
+                
+            }
         return $query->paginate(15);
     }
 }
