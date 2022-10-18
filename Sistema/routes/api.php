@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use PHPUnit\TextUI\XmlConfiguration\Group;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,5 +34,10 @@ Route::name('api.')->group(function(){
 
 Route::post('/Login', [App\Http\Controllers\auth\LoginController::class, 'login']);
 
-Route::apiResource('usuario', App\Http\Controllers\UsuarioController::class);
-
+Route::name('api.')
+    ->middleware('auth:sanctum')
+    ->group(function()
+    {
+        Route::apiResource('usuario', App\Http\Controllers\UsuarioController::class);
+        Route::apiResource('chofer', App\Http\Controllers\ChoferController::class);
+    });

@@ -55,4 +55,11 @@ class Chofer extends Model
         return $this->hasOne('App\Models\User', 'id', 'Usuario_Id');
     }
 
+    //scope
+
+    public function scopeActivo($query)
+    {
+        return $query->where('estado', '=', self::ESTADO_ACTIVO);
+    }
+
 }

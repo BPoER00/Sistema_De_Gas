@@ -1,5 +1,17 @@
 *REGISTRO DE CAMBIOS SISTEMA*
 
+	*18-10-2022*
+		- Iniciamos con la creacion de actions creamos.
+		- Actions creados de AsignarCamion, Camion, Chofer, Usuario.
+			- Actualizar.
+			- Buscar.
+			- Nuevo.
+			- Eliminar.
+			- Obtener.
+		- Actions creados de Autenticacion.
+			- CrearTokenAction.
+			- LoginAction.
+
 	*13-10-2022*
 		- Instalamos sanctum y laravel/ui para el uso de la autenticacion del api.
 		- Agregando Actions Para La Facilitacion Del Uso Del Api Con El Front, Se Agregaron Los Siguientes.

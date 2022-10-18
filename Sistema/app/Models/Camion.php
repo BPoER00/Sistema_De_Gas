@@ -82,4 +82,10 @@ class Camion extends Model
     {
         return $this->hasOne('App\Models\Uso_Camion', 'id', 'Uso_Camion_Id');
     }
+
+    //scope
+    public function scopeActivo($query)
+    {
+        return $query->where('estado', '=', self::ESTADO_ACTIVO);
+    }
 }
